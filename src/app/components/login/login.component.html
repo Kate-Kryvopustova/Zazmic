@@ -1,0 +1,34 @@
+<div class="container">
+
+  <div class="container__login-block">
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form">
+
+      <h1 class="form__title" >LOGIN</h1>
+  
+      <div class="email-wrapper">
+        <input formControlName="email" placeholder="Username" class="email" type="email"/>
+        <p class="helper-text-email">Up to 40 symbols</p>
+  
+      </div>
+  
+      <div class="password-wrapper">
+        <input formControlName="password" placeholder="Password" class="password" type="password"/>
+        <p class="helper-text-password">
+          8 symbols or more
+        </p>
+      </div>
+      
+      <button type="submit" [disabled]="!loginForm.valid" class="button">LOGIN</button>
+    </form>
+  
+  </div>
+
+  <app-hello-block></app-hello-block>
+  <app-navigation></app-navigation>
+  <app-logo></app-logo>
+</div>
+
+
+
+

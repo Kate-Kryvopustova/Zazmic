@@ -1,0 +1,43 @@
+.container {
+  width: 520px;
+  height: 278px;
+  position: fixed;
+  top: 262px;
+  left: 200px;
+}
+
+.welcome {
+  color: #FFFFFF;
+  opacity: 34%;
+  width: 262px;
+  height: 72px;
+  font-family: quicksand, sans-serif;
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 72px;
+  margin: 0px;
+}
+
+.title {
+  margin-top: 24px;
+  color: #FFFFFF;
+  width: 271px;
+  height: 108px;
+  font-weight: 500;
+  font-family: quicksand, sans-serif;
+  font-size: 72px;
+  line-height: 108px;
+  margin: 0px;
+}
+
+.description {
+  font-family: quicksand, sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  color: #FFFFFF;
+  opacity: 74%;
+  width: 520px;
+  height: 54px;
+  font-weight: 400;
+  margin-top: 20px;
+}
