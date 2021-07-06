@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
 
 export class PageNotFoundComponent {
 
+  button = 'BACK TO HOME PAGE';
+  typeButton = 'button';
+
   constructor() { }
 
 }
