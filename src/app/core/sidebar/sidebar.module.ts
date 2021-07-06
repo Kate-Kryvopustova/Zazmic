@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SelectComponent } from './select.component';
+import { SidebarComponent } from './sidebar.component';
 
 
 
 @NgModule({
   declarations: [
-    SelectComponent
+    SidebarComponent
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    SidebarComponent
   ]
 })
-export class SelectModule { }
+export class SidebarModule { }

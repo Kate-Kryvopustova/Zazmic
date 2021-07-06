@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SelectComponent } from './select.component';
-
+import { HelloBlockComponent } from './hello-block.component';
 
 
 @NgModule({
   declarations: [
-    SelectComponent
+    HelloBlockComponent
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    HelloBlockComponent
   ]
 })
-export class SelectModule { }
+export class HelloBlockModule { }

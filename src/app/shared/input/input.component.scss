@@ -1,0 +1,117 @@
+.input-container {
+  outline: none;
+  border-bottom: 1px solid #313131;
+  opacity: 60%;
+  padding: 0px;
+  position: relative;
+  font-family: quicksand, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #E5E5E5;
+  width: 344px;
+  height: 56px;
+
+  .svg {
+    position: absolute;
+    opacity: 60%;
+    top: 16px;
+    left: 12px;
+  }
+
+  .input {
+    border: none;
+    font-size: 16px;
+    margin: 16px 0 10px;
+    outline: 0;
+    width: 340px;
+    background-color: #E5E5E5;
+  }
+
+  .label {
+    font-size: 16px;
+    position: absolute;
+    transform-origin: top left;
+    transform: translate(0, 16px) scale(1);
+    transition: all .1s ease-in-out;
+    background-color: #E5E5E5;
+    margin-left: 48px;
+  }
+
+  &:hover {
+    background-color: rgba(39, 170, 240, 0.06);
+    border-bottom: 1px solid #27AAF0;
+    cursor: pointer;
+
+    .label {
+      background-color: rgba(39, 170, 240, 0.0006);
+      cursor: pointer;
+    }
+
+    .input {
+      background-color: rgba(39, 170, 240, 0.0006);
+      cursor: pointer;
+    }
+  }
+
+  &.active {
+    background-color: rgba(39, 170, 240, 0.06);
+    color: #27AAF0;
+    border-bottom: 1px solid #27AAF0;
+
+    .label {
+      transform: translate(0, 4px) scale(.75);
+      margin-left: 12px;
+      margin-top: 5px;
+      font-size: 12px;
+      font-weight: 500;
+      font-family: quicksand, sans-serif;
+      background-color: rgba(39, 170, 240, 0.0006);
+    }
+
+    .svg {
+      display: none;
+    }
+
+    .input {
+      color: #27AAF0;
+      font-size: 16px;
+      margin-left: 12px;
+      background-color: rgba(39, 170, 240, 0.0006);
+    }
+  }
+
+  &.dirty {
+
+    .label {
+      color: #27AAF0;
+      transform: translate(0, 4px) scale(.75);
+      margin-left: 12px;
+      margin-top: 5px;
+      font-size: 12px;
+      font-weight: 500;
+      font-family: quicksand, sans-serif;
+      background-color: rgba(39, 170, 240, 0.0006);
+    }
+
+    .input {
+      width: 200px;
+      margin-left: 12px;
+      color: #313131;
+      line-height: 20px;
+    }
+
+    .svg {
+      display: none;
+    }
+  }
+}
+
+.helper-text {
+  font-family: quicksand, sans-serif;
+  font-size: 12px;
+  height: 16px;
+  line-height: 16px;
+  color: #313131;
+  opacity: 73%;
+  margin: 0px;
+}
