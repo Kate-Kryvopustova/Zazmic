@@ -1,8 +1,105 @@
-.cotainer {
-  display: flex;
-  flex-direction: row;
-}
+@import '/src/assets/styles/variables';
 
-.container__feed {
-  background-color: #FAFAFA;
+.container {
+  background-color: $background-color;
+  flex-direction: column;
+
+  @include flex-center;
+
+  .topic {
+    background-color: $color-5;
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+  
+    @include box(992, 225);
+
+    @media (max-width: 1200px) {
+      width: 800px;
+    }
+
+    @media (max-width: 900px) {
+      width: 700px;
+    }
+  
+    &__image {
+      @include box(320, 225);
+    }
+  
+    &__info {
+      @include box(672, 225);
+  
+      .tags {
+        display: flex;
+        flex-direction: row;
+        margin: 24px 32px 12px;
+  
+        .item {
+          margin-right: 8px;
+        }
+      }
+  
+      .title {
+        margin: 0px 24px 16px 32px;
+  
+        @include font($body-font-family, $font-size-5, $color-6, $font-weight-bold, $line-height-4);
+      }
+  
+      .preview {
+        margin: 0px 24px 0px 32px;
+        opacity: 85%;
+  
+        @include font($body-font-family, $font-size-2, $color-6, $font-weight-regular, $line-height-3);
+      }
+  
+      .footer {
+        @include flex-space-between;
+  
+        .author {
+          flex-direction: row;
+          height: 40px;
+          margin: 40px 0px 24px 32px;
+  
+          @include flex-center;
+  
+          &__avatar {
+            margin-right: 8px;
+            padding: 1px;
+            border: 1px solid $color-1;
+            border-radius: 26px;
+  
+            @include box(40, 40);
+          }
+  
+          &__name {
+            @include font($body-font-family, $font-size-2, $color-6, $font-weight-medium, $line-height-2);
+          }
+        }
+  
+        .reactions {
+          flex-direction: row;
+  
+          @include flex-center;
+  
+          .heart {
+            margin-right: 4px;
+          }
+  
+          .star {
+            margin-right: 24px;
+  
+            @include box(20, 20);
+          }
+  
+          .likes {
+            padding-right: 8px;
+            border-right: 1px solid $color-1-transparent;
+            margin-right: 8px;
+            opacity: 73%;
+          }
+        }
+      }
+    }
+  }
 }

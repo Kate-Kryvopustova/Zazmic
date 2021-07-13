@@ -19,10 +19,11 @@ export class LoginComponent implements DoCheck {
   labelPassword = 'Password';
   passwordType = 'password';
   helperUserPasswordText = '8 symbols or more';
-  userSVG = 'assets/images/login/user.svg';
-  passwordSVG = 'assets/images/login/key.svg';
+  userSVG = 'assets/images/svg/login/user.svg';
+  passwordSVG = 'assets/images/svg/login/key.svg';
   typeButton = 'submit';
   disable: boolean = true;
+  buttonSVG = 'assets/images/svg/login/login.svg';
 
   form: FormGroup;
 

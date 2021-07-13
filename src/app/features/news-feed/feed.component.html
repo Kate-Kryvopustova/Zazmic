@@ -1,1 +1,28 @@
-<div>feed work</div>
+<div class="container">
+  <div *ngFor="let topic of feedNews$ | async as IFeedNews" class="topic" [routerLink]="['/feed/', topic.id]">
+    <img class="topic__image" [src]="topic.image" alt="photo of the topic"/>
+    <div class="topic__info">
+
+      <div class="tags">
+        <app-tags *ngFor="let name of topic.tags" [name]="name" class="item"></app-tags>
+      </div>
+
+      <h1 class="title">{{ topic.title }}</h1>
+      <p class="preview">{{ topic.preview }}</p>
+      <div class="footer">
+
+        <div class="author">
+          <img class="author__avatar" [src]="topic.user.src"/>
+          <p class="author__name">{{ topic.user.name }}</p>
+        </div>
+
+        <div class="reactions">
+          <img class="heart" src="assets/images/pictures/new-feed/heart.png"/>
+          <p class="likes">{{ topic.likes }}</p>
+          <img class="star" src="assets/images/pictures/new-feed/star.png"/>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

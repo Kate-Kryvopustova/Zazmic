@@ -1,18 +1,29 @@
-:host ::ng-deep app-button {
-  .button {
-    text-indent: 0px;
-    margin: 0px;
-  }
-}
+@import '/src/assets/styles/variables';
 
 .container {
-  display: flex;
   flex-direction: column;
-  align-items: center;
+
+  @include flex-center;
 
   .image {
-    height: 508px;
-    width: 1216px;
     margin: 100px 112px 36px;
+
+    @include box(1216, 608);
+
+    @media (max-width: 1270px) {
+      @include box(1000, 500);
+    }
+
+    @media (max-width: 1100px) {
+      @include box(950, 475);
+    }
+
+    @media (max-width: 1050px) {
+      @include box(850, 425);
+    }
+
+    @media (max-width: 900px) {
+      @include box(800, 400);
+    }
   }
 }

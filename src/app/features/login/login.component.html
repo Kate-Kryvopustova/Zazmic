@@ -22,9 +22,10 @@
         [label]='labelPassword' 
         [helperText]='helperUserPasswordText'
         [inputSVG]='passwordSVG'
+        class="password-field"
       ></app-input>
       
-      <app-button class="button"  [ngClass]="{ 'disabled' : disable }"[typeButton]='typeButton' [name]='button'></app-button>
+      <app-button class="button-svg" [buttonSVG]='buttonSVG' [ngClass]="{ 'disabled' : disable }" [typeButton]='typeButton' [name]='button'></app-button>
 
       <label class="checkbox"> Remember me
         <input type="checkbox" id="" name="" />

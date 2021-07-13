@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tags',
@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class TagsComponent {
 
+  @Input() name?: string
+
   constructor() { }
-
-
 }

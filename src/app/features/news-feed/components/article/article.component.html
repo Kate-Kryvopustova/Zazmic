@@ -1,1 +1,58 @@
-<p>article works!</p>
+<div class="container">
+  <div class="topic">
+    <h1 class="topic__title"> {{ topic?.title }} </h1>
+
+    <div class="topic__caption">
+
+      <div class="author">
+        <img class="author__avatar" [src]="topic?.user?.src" />
+        <p class="author__name">{{ topic?.user?.name }}</p>
+      </div>
+
+      <div class="reactions">
+        <p class="reactions__data">{{ topic?.date?.month }} {{ topic?.date?.day }}, {{ topic?.date?.year }} </p>
+        <img class="reactions__heart" src="assets/images/pictures/new-feed/heart.png"/>
+        <p class="reactions__likes">{{ topic?.likes }}</p>
+        <img class="reactions__star" src="assets/images/pictures/new-feed/star.png"/>
+      </div>
+
+    </div>
+
+    <img  class="topic__image" [src]="topic?.image"/>
+    <p class="topic__main-text">{{ topic?.shortTitle }}</p>
+    <p class="topic__main-text">{{ topic?.shortDescriptions }}</p>
+    <p class="topic__main-paragraph">{{ topic?.mainParagraph }}</p>
+    <p class="topic__main-text">{{ topic?.descriptionsOne }}</p>
+    <p class="topic__main-text">{{ topic?.descriptionsTwo }}</p>
+    <p class="topic__main-text last-description">{{ topic?.descriptionsThree }}</p>
+
+    <div class="topic__caption footer">
+
+      <div class="author">
+        <img class="author__avatar" [src]="topic?.user?.src" />
+        <p class="author__name">{{ topic?.user?.name }}</p>
+      </div>
+
+      <div class="reactions">
+        <p class="reactions__data">{{ topic?.date?.month }} {{ topic?.date?.day }}, {{ topic?.date?.year }} </p>
+        <img class="reactions__heart" src="assets/images/pictures/new-feed/heart.png"/>
+        <p class="reactions__likes" >{{ topic?.likes }}</p>
+        <img class="reactions__star" src="assets/images/pictures/new-feed/star.png"/>
+      </div>
+
+    </div>
+
+    <div class="topic__tags">
+      <h3 class="tag-title">Tags</h3>
+      <div class="tag-container">
+        <app-tags class="tag" *ngFor="let name of topic?.tags" [name]="name"></app-tags>
+      </div>
+    </div>    
+  </div>
+
+  <div class="top" (click)='scrollToTop()'>
+    <img src="assets/images/svg/right-arrow.svg"/>
+    <button class="scrollToTop">Go to top</button>
+  </div>
+  
+</div>
