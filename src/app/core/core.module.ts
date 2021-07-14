@@ -4,7 +4,6 @@ import { CoreRoutingModule } from './core-routing.module';
 import { SidebarModule } from './sidebar/sidebar.module';
 
 
-
 @NgModule({
   declarations: [
   ],

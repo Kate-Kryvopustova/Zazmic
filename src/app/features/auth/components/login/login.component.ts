@@ -1,13 +1,11 @@
 import { Component, DoCheck } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { HttpService } from './services/http.service';
 
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  providers: [HttpService],
 })
 
 export class LoginComponent implements DoCheck {
@@ -27,7 +25,7 @@ export class LoginComponent implements DoCheck {
 
   form: FormGroup;
 
-  constructor(private httpService: HttpService) {
+  constructor() {
     this.form = new FormGroup({
       userName: new FormControl('', [
         Validators.required,
