@@ -1,0 +1,11 @@
+@import '/src/assets/styles/variables';
+
+.container {
+  display: flex;
+  background-color: $background-color;
+
+  .routing {
+    display: inline-block;
+    margin: 0 auto;
+  }
+}

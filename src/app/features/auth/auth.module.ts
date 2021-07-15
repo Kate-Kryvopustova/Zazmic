@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { HelloBlockComponent } from './components/hello-block/hello-block.component';
-import { LayoutComponent } from './components/layout/layout.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { RegistrationComponent } from './components/registration/registration.component';
@@ -17,7 +16,6 @@ import { InputModule } from '../../shared/input/input.module';
 @NgModule({
   declarations: [
     HelloBlockComponent,
-    LayoutComponent,
     LoginComponent,
     NavigationComponent,
     RegistrationComponent
@@ -34,7 +32,7 @@ import { InputModule } from '../../shared/input/input.module';
   ],
   exports: [
     HelloBlockComponent,
-    LayoutComponent,
+    // LayoutComponent,
     LoginComponent,
     NavigationComponent,
     RegistrationComponent

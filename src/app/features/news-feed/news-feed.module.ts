@@ -13,7 +13,7 @@ import { ArticleComponent } from './components/article/article.component';
   imports: [
     CommonModule,
     NewsFeedRoutingModule,
-    TagsModule
+    TagsModule,
   ],
   exports: [
     FeedComponent,

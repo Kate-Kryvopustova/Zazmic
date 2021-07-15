@@ -1,5 +1,5 @@
 <div class="container">
-  <div *ngFor="let topic of feedNews$ | async as IFeedNews" class="topic" [routerLink]="['/feed/', topic.id]">
+  <div *ngFor="let topic of feedNews$ | async as IFeedNews" class="topic" [routerLink]="[topic.id]">
     <img class="topic__image" [src]="topic.image" alt="photo of the topic"/>
     <div class="topic__info">
 

@@ -1,5 +1,7 @@
 import { Component, DoCheck } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 
 @Component({
@@ -25,9 +27,12 @@ export class LoginComponent implements DoCheck {
 
   form: FormGroup;
 
-  constructor() {
+  constructor(
+    private authService: AuthService,
+    private router: Router
+    ) {
     this.form = new FormGroup({
-      userName: new FormControl('', [
+      identifier: new FormControl('', [
         Validators.required,
         Validators.maxLength(40)
       ]),
@@ -40,7 +45,7 @@ export class LoginComponent implements DoCheck {
 
   
   ngDoCheck(): void {
-    if (this.form.invalid ) {
+    if (this.form.invalid) {
       this.disable = true;
     } else {
       this.disable = false;
@@ -49,24 +54,20 @@ export class LoginComponent implements DoCheck {
 
   
   onSubmit(){
+    const data = this.form.value;
+
     if (this.form.invalid) {
       return;
     }
-    // this.httpService
-    //   .mockRequest()
-    //   .subscribe(
-    //     data => console.log(data)
-    //   );
-    // this.form.reset();
 
-    console.log(this.form.value)
+    if(this.authService.isLoggedIn) {
+      this.authService.deleteToken();
+      this.authService.signIn(data);
+    } else {
+      this.authService.signIn(data);
+    }
+
+    this.form.reset()
   }
 
-  get userName() {
-    return this.form.get('userName');
-  }
-
-  get password() {
-    return this.form.get('password');
-  }
 }
